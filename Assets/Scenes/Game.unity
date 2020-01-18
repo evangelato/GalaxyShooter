@@ -407,6 +407,36 @@ Transform:
   m_Father: {fileID: 1797563303}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1708908278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1708908279}
+  m_Layer: 0
+  m_Name: Power Up Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1708908279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708908278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1797563303}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1797563301
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +468,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 3539180493066871825, guid: 53f2356bf9c8e41a0bb80adce2973954,
     type: 3}
+  _tripleShotPowerUpPrefab: {fileID: 2299897190089910166, guid: e907207b3062544669fe6d7c0dcb2833,
+    type: 3}
   _enemyContainer: {fileID: 1138907107}
+  _powerUpContainer: {fileID: 1708908278}
 --- !u!4 &1797563303
 Transform:
   m_ObjectHideFlags: 0
@@ -451,6 +484,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1138907108}
+  - {fileID: 1708908279}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -583,72 +617,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6802464, y: 3.9013438}
   m_EdgeRadius: 0
---- !u!1001 &2299897189869721336
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910152, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299897190089910166, guid: e907207b3062544669fe6d7c0dcb2833,
-        type: 3}
-      propertyPath: m_Name
-      value: Triple_Shot_Powerup
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e907207b3062544669fe6d7c0dcb2833, type: 3}
