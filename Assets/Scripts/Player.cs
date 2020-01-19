@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     // Public or private reference
     [SerializeField]
     private float _speed = 3.5f;
+    private float _speedMultiplier = 2.0f;
     [SerializeField]
     private GameObject _laserPrefab;
     [SerializeField]
@@ -94,5 +95,17 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         _isTripleShotActive = false;
+    }
+
+    public void ActivateSpeedPowerUp()
+    {
+        _speed *= _speedMultiplier;
+        StartCoroutine(SpeedDownRoutine());
+    }
+
+    IEnumerator SpeedDownRoutine()
+    {
+        yield return new WaitForSeconds(5.0f);
+        _speed /= _speedMultiplier;
     }
 }
