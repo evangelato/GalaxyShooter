@@ -36,7 +36,7 @@ public class PowerUp : MonoBehaviour
                         player.ActivateSpeedPowerUp();
                         break;
                     case 2:
-                        Debug.Log("Collected Shield");
+                        player.ActivateShieldPowerUp();
                         break;
                     default:
                         Debug.Log("Default Power Up Case");
