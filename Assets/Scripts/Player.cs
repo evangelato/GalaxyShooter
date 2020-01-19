@@ -90,6 +90,7 @@ public class Player : MonoBehaviour
             return;
         } else {
             _lives--;
+            _uiManager.UpdateLives(_lives);
         }
 
         if (_lives < 1)
