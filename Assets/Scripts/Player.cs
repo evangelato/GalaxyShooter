@@ -96,7 +96,9 @@ public class Player : MonoBehaviour
         if (_lives < 1)
         {
             _spawnManager.StopSpawning();
+            _uiManager.DisplayGameOver();
             Destroy(this.gameObject);
+            
         }
     }
 
