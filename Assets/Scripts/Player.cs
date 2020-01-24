@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
 {
     // Public or private reference
@@ -28,6 +29,10 @@ public class Player : MonoBehaviour
     private GameObject _leftEngineDamage;
     [SerializeField]
     private GameObject _rightEngineDamage;
+    [SerializeField]
+    private AudioClip _laserSoundClip;
+    [SerializeField]
+    private AudioSource _audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -35,13 +40,22 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(0, 0, 0);
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
         _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        _audioSource = GetComponent<AudioSource>();
         if (_spawnManager == null)
         {
-            Debug.LogError("The Spawn Manager is NULL");
+            Debug.LogError("Player: The Spawn Manager is NULL");
         }
         if (_uiManager == null)
         {
-            Debug.LogError("The UI Manager is NULL");
+            Debug.LogError("Player: The UI Manager is NULL");
+        }
+        if (_audioSource == null)
+        {
+            Debug.LogError("Player: Audio Source is NULL");
+        } 
+        else 
+        {
+            _audioSource.clip = _laserSoundClip;
         }
     }
 
@@ -85,6 +99,8 @@ public class Player : MonoBehaviour
         {
             Instantiate(_laserPrefab, transform.position + new Vector3(0, 1.05f, 0), Quaternion.identity);
         }
+
+        _audioSource.Play();
     }
 
     public void Damage()
