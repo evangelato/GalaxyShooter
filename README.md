@@ -17,6 +17,8 @@ Up: W or Up Arrow Key
 
 Down:  S or Down Arrow Key
 
+Shoot Laser: Space Key
+
 Reload Game: R
 ```
 
